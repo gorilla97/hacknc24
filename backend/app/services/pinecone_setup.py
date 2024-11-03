@@ -5,7 +5,6 @@ import torch
 import time
 import os
 
-# Initialize a Pinecone client with your API key
 pc = Pinecone(os.environ.get("PINECONE_API_KEY"))
 
 index_name = 'financial-embeddings'
@@ -25,10 +24,8 @@ if not pc.has_index(index_name):
 while not pc.describe_index(index_name).status['ready']:
     time.sleep(1)
 
-# Connect to the index
 index = pc.get_index(index_name)
 
-# Initialize FinBERT for embedding generation
 class EmbeddingGenerator:
     def __init__(self):
         self.tokenizer = AutoTokenizer.from_pretrained("yiyanghkust/finbert-tone")
