@@ -56,9 +56,9 @@ export default function ChatWindow() {
   };
 
   return (
-    <div className="flex flex-col max-w-md mx-auto h-[70vh] bg-white shadow-md rounded-lg">
+    <div className="flex flex-col max-w-md mx-auto h-[70vh] bg-white shadow-md rounded-lg transition-all hover:shadow-lg">
       {/* Chat Messages Window */}
-      <div className="flex-1 p-4 overflow-y-auto border-b">
+      <div className="flex-1 p-4 overflow-y-auto border-b  hover:bg-gray-100">
         {messages.map((message, index) => (
           <div
             key={index}
