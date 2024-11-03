@@ -14,5 +14,7 @@ class Settings(BaseSettings):
     neo4j_uri: str = "neo4j+s://1743086b.databases.neo4j.io"
     neo4j_user: str = "neo4j"
     neo4j_password: str = "WyHIDZmBEQIHiKUktr77A3zihyUb50TxAVl6t6a0QPU"
+    alpha_vantage_api_key: str = os.environ.get("YOUR_ALPHA_VANTAGE_API_KEY")
+    
 
 settings = Settings()
